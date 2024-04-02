@@ -7,7 +7,7 @@ public class HoraExacta extends Hora{
 	/**
 	 * Atributo que almacena los minutos de la hora
 	 */
-	private int segundos;
+	private int segundos = 0;
 	
 	//CONSTRUCTOR
 	/**
@@ -39,7 +39,21 @@ public class HoraExacta extends Hora{
 			this.segundos = 0;
 			super.inc();
 		}
-
+	}
+	
+	//
+	@Override
+	public String toString() {
+		String cadena="";
+		cadena += super.toString();
+		if (segundos < 10) {
+			cadena += ":0" + this.segundos;
+		}
+		else {
+			cadena += ":" + this.segundos;
+		}
+		
+		return cadena;		
 	}
 
 }

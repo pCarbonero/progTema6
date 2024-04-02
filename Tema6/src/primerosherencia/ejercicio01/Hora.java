@@ -75,6 +75,7 @@ public class Hora {
 	 * 
 	 * @return cadena
 	 */
+	@Override
 	public String toString() {
 		String cadena = "";
 		// hora
