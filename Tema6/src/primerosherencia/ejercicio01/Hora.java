@@ -72,7 +72,7 @@ public class Hora {
 	
 	// TO STRING
 	/**
-	 * 
+	 * metodo toString para imprimir los atributos de la 
 	 * @return cadena
 	 */
 	@Override

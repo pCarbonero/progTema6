@@ -52,7 +52,6 @@ public class HoraExacta extends Hora{
 		else {
 			cadena += ":" + this.segundos;
 		}
-		
 		return cadena;		
 	}
 
