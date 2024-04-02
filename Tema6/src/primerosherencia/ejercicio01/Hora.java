@@ -6,11 +6,11 @@ public class Hora {
 	/**
 	 * Atributo que almacena la hora
 	 */
-	int hora;
+	protected int hora;
 	/**
 	 * Atributo que almacena los minutos
 	 */
-	int minuto;
+	protected int minuto;
 	
 	
 	// COSNTRUCTOR
@@ -60,6 +60,14 @@ public class Hora {
 	// METODOS
 	void inc() {
 		this.minuto++;
+		if (this.minuto == 60) {
+			this.minuto = 0;
+			this.hora++;
+		}
+		
+		if (this.hora == 24) {
+			this.hora = 0;
+		}
 	}
 	
 	// TO STRING
