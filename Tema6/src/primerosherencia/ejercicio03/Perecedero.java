@@ -23,7 +23,7 @@ public class Perecedero extends Producto{
 	@Override
 	public double calcular(int cantidad) {
 		double total = super.calcular(cantidad);
-		double totalFinal = 0;
+		double totalFinal = total;
 		if (diasACaducar == 1) {
 			totalFinal = total/4;
 		}

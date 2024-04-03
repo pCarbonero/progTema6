@@ -6,7 +6,7 @@ public class Main {
 		double total;
 		Producto pr = new Producto("Manzana", 1.5);
 		NoPerecedero np = new NoPerecedero("Pasta", 1.90, "A");
-		Perecedero pe = new Perecedero("Ensalada", 4, 1);
+		Perecedero pe = new Perecedero("Ensalada", 4, 4);
 		System.out.println(pr);
 		System.out.println(np);
 		System.out.println(pe);
