@@ -6,7 +6,7 @@ public class Perecedero extends Producto{
 	
 	public Perecedero(String nombre, double precio, int diasACaducar) {
 		super(nombre, precio);
-		if (diasACaducar >= 0) {
+		if (diasACaducar > 0) {
 			this.diasACaducar = diasACaducar;
 		}
 	}//
@@ -15,7 +15,7 @@ public class Perecedero extends Producto{
 		return this.diasACaducar;
 	}
 	public void setDiasACaducar(int diasACaducar) {
-		if (diasACaducar >= 0) {
+		if (diasACaducar > 0) {
 			this.diasACaducar = diasACaducar;
 		}
 	}
