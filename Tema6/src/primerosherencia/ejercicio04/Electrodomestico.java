@@ -59,14 +59,9 @@ public class Electrodomestico {
 			this.precioBase = precioBase;
 		}
 
-		if (comprobarColor(color)) {
-			this.color = colores.valueOf(color.toUpperCase());
-		}
+		comprobarColor(color);
 
-		if (comprobarConsumoEnergetico(consumoEnergetico)) {
-			this.consumoEnergetico = posiblesComsumoEnergetico
-					.valueOf(Character.toString(consumoEnergetico).toUpperCase());
-		}
+		comprobarConsumoEnergetico(consumoEnergetico);
 
 		if (peso > 0) {
 			this.peso = peso;
@@ -93,28 +88,32 @@ public class Electrodomestico {
 
 	// METODOS
 
-	private boolean comprobarConsumoEnergetico(char letra) {
-		boolean letraCorrecta = false;
+	private void comprobarConsumoEnergetico(char letra) {
 
-		for (posiblesComsumoEnergetico valores : posiblesComsumoEnergetico.values()) {
-			if (valores.toString().equals(Character.toString(letra).toUpperCase())) {
-				letraCorrecta = true;
-			}
+		switch (letra) {
+		case 'A', 'B', 'C', 'D', 'E', 'F':
+			this.consumoEnergetico = posiblesComsumoEnergetico.valueOf(String.valueOf(letra));
+			break;
+		default:
+			this.consumoEnergetico = posiblesComsumoEnergetico.F;
+			break;
 		}
 
-		return letraCorrecta;
 	}// fin metodo
 
-	private boolean comprobarColor(String color) {
-		boolean colorCorrecto = false;
+	private void comprobarColor(String color) {
 
-		for (colores valores : colores.values()) {
-			if (valores.toString().equals(color.toUpperCase())) {
-				colorCorrecto = true;
-			}
+		String colorMayus = color.toUpperCase();
+
+		switch (colorMayus) {
+		case "BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS":
+			this.color = colores.valueOf(colorMayus);
+			break;
+		default:
+			this.color = colores.BLANCO;
+			break;
 		}
 
-		return colorCorrecto;
 	}
 
 	public void precioFinal() {
@@ -135,27 +134,27 @@ public class Electrodomestico {
 		case A: {
 			this.precioBase = this.precioBase + 100;
 			break;
-			}
+		}
 		case B: {
 			this.precioBase = this.precioBase + 80;
 			break;
-			}
+		}
 		case C: {
 			this.precioBase = this.precioBase + 60;
 			break;
-			}
+		}
 		case D: {
 			this.precioBase = this.precioBase + 50;
 			break;
-			}
+		}
 		case E: {
 			this.precioBase = this.precioBase + 30;
 			break;
-			}
+		}
 		case F: {
 			this.precioBase = this.precioBase + 10;
 			break;
-			}
+		}
 		}
 	}
 
