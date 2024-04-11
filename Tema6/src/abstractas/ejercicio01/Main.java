@@ -27,7 +27,7 @@ public class Main {
 			}
 			case 3: {
 				//
-				imprimeArray(figuras);
+				imprimeArray();
 				break;
 			}
 			case 4: {
@@ -52,7 +52,6 @@ public class Main {
 	
 	public static Triangulo creaTriangulo() {
 		Triangulo tr;
-		int numLados = 3;
 		double lado1;
 		double lado2;
 		double lado3;
@@ -64,16 +63,15 @@ public class Main {
 		System.out.println("Dime lado 3 del tirámgulo ");
 		lado3 = sc.nextDouble();
 		
-		tr = new Triangulo(numLados, lado1, lado2, lado3);
+		tr = new Triangulo(lado1, lado2, lado3);
 		
-		anadirArray(figuras, tr);
+		anadirArray(tr);
 		
 		return tr;
 	}
 	
 	public static Rectangulo creaRectangulo() {
 		Rectangulo rc;
-		int numLados = 2;
 		double lado1;
 		double lado2;
 
@@ -84,26 +82,29 @@ public class Main {
 		lado2 = sc.nextDouble();
 
 		
-		rc = new Rectangulo(numLados, lado1, lado2);
-		anadirArray(figuras, rc);
+		rc = new Rectangulo(lado1, lado2);
+		anadirArray(rc);
 		
 		return rc;
 	}
 	
-	public static void anadirArray(Poligono[] figuras, Poligono poligono) {
-	    for (int i = 0; i < figuras.length; i++) {
-	        if (figuras[i] == null) {
-	            figuras[i] = poligono;
-	            System.out.println("Figura añadida correctamente en la posición " + i);
-	            return;
-	        }
-	    }
-	    System.out.println("No se puede añadir más figuras, el array está lleno.");
+	public static void anadirArray(Poligono poligono) {
+		int i = 0;
+		boolean encontrado = false;
+		
+		while (i < figuras.length && !encontrado) {
+			if (figuras[i] == null) {
+				figuras[i] = poligono;
+				encontrado = true;
+			}
+			
+			i++;
+		}
 	}
 	
-	public static void imprimeArray(Poligono[] figuras2) {
+	public static void imprimeArray() {
 		double area = 0;
-		for(Poligono pl : figuras2) {
+		for(Poligono pl : figuras) {
 			if (pl != null) {
 				System.out.println(pl);
 				area = pl.area();

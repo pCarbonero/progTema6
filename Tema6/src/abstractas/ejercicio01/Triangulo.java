@@ -22,8 +22,8 @@ public class Triangulo extends Poligono{
 	 * @param lado1
 	 * @param lado2
 	 */
-	public Triangulo(int numeroLados, double lado1, double lado2, double lado3) {
-		super(numeroLados);		
+	public Triangulo(double lado1, double lado2, double lado3) {
+		super(3);		
 		if (lado1 > 0) {
 			this.lado1 = lado1;
 		}		

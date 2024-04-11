@@ -21,8 +21,8 @@ public class Rectangulo extends Poligono{
 	 * @param lado1
 	 * @param lado2
 	 */
-	public Rectangulo(int numeroLados, double lado1, double lado2) {
-		super(numeroLados);		
+	public Rectangulo(double lado1, double lado2) {
+		super(2);		
 		if (lado1 > 0) {
 			this.lado1 = lado1;
 		}		
