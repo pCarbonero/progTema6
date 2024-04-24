@@ -1,0 +1,34 @@
+Ficha
+- id: int
+- titulo: String
++ getId(): int
++ setId()
++ getTitulo(): String
++ setTitulo()
++ abstract prestarElemento(): int
++ Ficha(id, titulo)
+--------
+
+Libro
+- autor: String
+- editorial: String
++ getters y setters
++ Libro(id, titulo, autor, editorial)
+--------
+
+Revista
+- numRevista: int
+- anyoPub: int
++ getters y setters
++ Revista(id, titulo, numRevista, anyoPun)
+--------
+
+Dvd
+- director: String
+- anyoPub: int
+- tipoDvd: enum tipo
+Tipo (PELICULA, DOCUMENTAL, SERIE)
++ getters y setters
++ Dvd(id, titulo, director, anyoPub, tipoDvd)
+--------
+
