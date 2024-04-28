@@ -1,0 +1,23 @@
+Agenda
+- contactos: List<Contacto>
+------------
++ addPersona()
++ addEmpresa()
++ Agenda
+============
+Contacto
+- nombre: String
+- tlfn: int
+------------
++ equals(Object O): nombre=nombre (override)
++ Contacto(nombre, tlfn)
+============
+Persona extends Contacto
+- cumpleanyos: String
+------------
++ Persona(nombre, tlfn, cumpleanyos)
+============
+Empresa extends Contacto
+- paginaWeb: String
+------------
++ Empresa(nombre, tlfn, paginaWeb)

@@ -2,9 +2,7 @@ Ficha
 - id: int
 - titulo: String
 + getId(): int
-+ setId()
 + getTitulo(): String
-+ setTitulo()
 + abstract prestarElemento(): int
 + Ficha(id, titulo)
 --------
@@ -12,14 +10,14 @@ Ficha
 Libro
 - autor: String
 - editorial: String
-+ getters y setters
++ getters
 + Libro(id, titulo, autor, editorial)
 --------
 
 Revista
 - numRevista: int
 - anyoPub: int
-+ getters y setters
++ getters
 + Revista(id, titulo, numRevista, anyoPun)
 --------
 
@@ -27,6 +25,7 @@ Dvd
 - director: String
 - anyoPub: int
 - tipoDvd: enum tipo
+- getters 
 Tipo (PELICULA, DOCUMENTAL, SERIE)
 + getters y setters
 + Dvd(id, titulo, director, anyoPub, tipoDvd)
