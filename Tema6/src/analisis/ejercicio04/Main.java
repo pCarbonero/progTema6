@@ -25,6 +25,10 @@ public class Main {
 			a.mostrarLista();
 			break;
 		}
+		case 5:{
+			System.out.println("Has salido");
+			break;
+		}
 		default:
 			System.out.println("Opción no válida");
 		}
