@@ -1,38 +1,39 @@
 CuentaBancaria
 - numCuenta: int
-- saldo: double
-- titularesCuenta[3]: Titular
-----------------
-+ getters
-+ ingresar()
-+ retirar()
-+ anadirTitular()
-+ borrarTitular()
-================
+# saldo: double
+- titulares[3]: Titular
+-----------------------
++ CuentaBancaria(numCuenta, saldo, Titular)
++ void ingresar()
++ void retirar()
++ void addTitular()
++ void quitarTitular()
+
 Titular
 - dni: String
 - nombre: String
 - apellidos: String
-- tlfn: int
-================
-CuentaAhorro extends CuentaBancaria
-- cuotaMantenimiento: double
-- interesAnual: double
-----------------
-+ saldoConInteres()
-+ saldoSinCuota
-================
-CuentaCorriente extends CuentaBancaria
+- telefono: int
+-----------------------
++ 
+
+Ahorro extends CuentaBancaria
+- cuotaInteres: int
+- cuotaMantenimiento: int
+-----------------------
++ void aplicarInteres()
++ void restarMantenimiento()
+
+Corriente
 - porcentajeTransaccion: double
 - numTransacciones: int
-- transacciones: List<Transaccion>
-----------------
-+ getters
-+ mostrarArray()
-================
+- transacciones[10]: Transaccion
+--------------------------------
++ void realizarTransaccion()
+
 Transaccion
-- dia: int
+- dia: String
 - mes: String
-- anyo: int
+- anyo: String
 - concepto: String
 - importe: double
