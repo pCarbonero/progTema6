@@ -29,6 +29,13 @@ public abstract class AnimalDomestico implements Animal, Comparable<AnimalDomest
 	
 	@Override
 	public int compareTo(AnimalDomestico a) {
-		return this.peso - a.peso;
+		int aaa = 0;
+		if (this.peso < a.peso) {
+			aaa = -1;
+		}
+		else if (this.peso > a.peso) {
+			aaa = 1;
+		}
+		return aaa;
 	}
 }

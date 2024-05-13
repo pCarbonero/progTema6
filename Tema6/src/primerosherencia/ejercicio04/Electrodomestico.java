@@ -55,17 +55,11 @@ public class Electrodomestico {
 	 * @param peso
 	 */
 	public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
-		if (precioBase > 0) {
-			this.precioBase = precioBase;
-		}
-
+		this(precioBase, peso);
+		
 		comprobarColor(color);
 
 		comprobarConsumoEnergetico(consumoEnergetico);
-
-		if (peso > 0) {
-			this.peso = peso;
-		}
 
 	}// constructor
 
